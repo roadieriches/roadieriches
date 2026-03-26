@@ -672,6 +672,43 @@
   }
   .skip-link:focus { top: 0; }
 
+
+  /* COOKIE BANNER */
+  #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1a1a1a;
+    color: #f0f0f0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    z-index: 9999;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  #cookie-banner p { margin: 0; flex: 1; min-width: 200px; color: #ccc; }
+  #cookie-banner a { color: #18C16C; text-decoration: underline; }
+  #cookie-banner-btn {
+    background: #18C16C;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.4rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  #cookie-banner-btn:hover { background: #14a85c; }
+
 </style>
 </head>
 <body>
@@ -1868,6 +1905,19 @@
   }
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closePrivacy(); closeTerms(); } });
+  // Cookie consent
+  function acceptCookies() {
+    try { localStorage.setItem('rr_cookie_consent', '1'); } catch(e) {}
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+  (function() {
+    var consent;
+    try { consent = localStorage.getItem('rr_cookie_consent'); } catch(e) {}
+    if (!consent) {
+      document.getElementById('cookie-banner').style.display = 'flex';
+    }
+  })();
+
 
   function openTerms() {
     lastFocused = document.activeElement;
