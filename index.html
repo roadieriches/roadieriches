@@ -714,6 +714,12 @@
 <body>
 
 <!-- NAV -->
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-banner" role="region" aria-label="Cookie consent" style="display:flex;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;padding:1rem 2rem;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;z-index:9999;font-family:'DM Sans',sans-serif;font-size:0.82rem;line-height:1.5;">
+  <p style="margin:0;flex:1;min-width:200px;color:#ccc;">We use cookies from third-party services (Beehiiv, Cloudinary) to deliver content and process newsletter subscriptions. By continuing you accept our <a href="#" onclick="openPrivacy();return false;" style="color:#18C16C;text-decoration:underline;">Privacy Policy</a>.</p>
+  <button onclick="acceptCookies()" style="background:#18C16C;color:#fff;border:none;padding:0.5rem 1.4rem;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;">Got it</button>
+</div>
+
 <a href="#card-grid" class="skip-link">Skip to main content</a>
 <nav>
   <img class="nav-logo" alt="Roadie Riches" src="https://res.cloudinary.com/djf2b8kqg/image/upload/v1774525646/logo_gebhjx.png" alt="Roadie Riches">
@@ -1911,8 +1917,8 @@
     document.getElementById('cookie-banner').style.display = 'none';
   }
   (function() {
-    var consent;
-    try { consent = localStorage.getItem('rr_cookie_consent'); } catch(e) {}
+    var consent = false;
+    try { consent = localStorage.getItem('rr_cookie_consent') === '1'; } catch(e) {}
     if (!consent) {
       document.getElementById('cookie-banner').style.display = 'flex';
     }
@@ -1991,7 +1997,7 @@
     <p>We may update this Privacy Policy from time to time. The "last updated" date at the top of this page will reflect any changes. Continued use of this site after changes are posted constitutes your acceptance of the updated policy.</p>
 
     <h3 style="font-size:1rem;font-weight:700;margin:1.5rem 0 0.5rem;">10. Contact</h3>
-    <p>Questions about this Privacy Policy? Reach us at <a href="mailto:roadieriches@gmail.com">roadieriches@gmail.com</a>.</p>
+    <p>Questions about this Privacy Policy? Reach us at <a href="/cdn-cgi/l/email-protection#bcced3ddd8d5d9ced5dfd4d9cffcdbd1ddd5d092dfd3d1"><span class="__cf_email__" data-cfemail="e2908d83868b87908b818a8791a2858f838b8ecc818d8f">[email&#160;protected]</span></a>.</p>
   </div>
 </div>
 
@@ -2031,12 +2037,4 @@
     <p>These Terms are governed by the laws of the State of California, without regard to its conflict of law provisions.</p>
 
     <h3 style="font-size:1rem;font-weight:700;margin:1.5rem 0 0.5rem;">9. Contact</h3>
-    <p>Questions? Reach us at <a href="mailto:roadieriches@gmail.com">roadieriches@gmail.com</a>.</p>
-  </div>
-</div>
-
-<div id="terms-overlay" onclick="closeTerms()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:1000;cursor:pointer;"></div>
-
-<script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-</body>
-</html>
+    <p>Questions? Reach us at <a href="/cdn-cgi/l/email-protection#186a77797c717d6a717b707d6b587f75797174367b7775"><span class="__cf_email__" data-cfemail="c5b7aaa4a1aca0b7aca6ada0b685a2a8a4aca9eba6aaa8">[email&#160;protected
