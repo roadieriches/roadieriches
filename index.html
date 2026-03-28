@@ -1326,6 +1326,11 @@
     });
   }
 
+  // Apply default All filter on load to hide data-hidden cards
+  cards.forEach(c => {
+    if (c.dataset.hidden === 'true') c.classList.add('hidden');
+  });
+
   btns.forEach((btn, i) => {
     btn.setAttribute('role', 'tab');
     btn.setAttribute('tabindex', i === 0 ? '0' : '-1');
