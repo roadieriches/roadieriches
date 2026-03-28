@@ -764,18 +764,22 @@
       </div>
     </a>
 
-    <a class="card" href="https://www.amazon.com/dp/B0D8BPXVNB?ref=t_ac_view_request_product_image&campaignId=amzn1.campaign.2TDKSPPP8GMIE&linkCode=tr1&tag=roadieriches-20&linkId=amzn1.campaign.2TDKSPPP8GMIE_1774543254266" target="_blank" rel="noopener noreferrer" data-cat="health">
-      <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774473949/health-larq_udg9qp.avif" class="card-img-inner" alt="Larq Bottle PureVis" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;display:block;"></div>
+    <!-- HEALTH TIPS -->
+    <a class="card" data-cat="health" onclick="openModal('health');return false;" href="#" aria-label="Tips For Healthy Touring">
+      <div class="card-img">
+        <div class="card-img-inner">
+          <img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774720912/IMG_1721_tewdq9.jpg" alt="Tips For Healthy Touring" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+        </div>
+      </div>
       <div class="card-body">
         <div class="card-top">
-          <div class="card-icon-wrap">💧</div>
+          <div class="card-icon-wrap">💪</div>
           <span class="card-top-tag">Health &amp; Wellness</span>
         </div>
-        <h3>Larq Bottle PureVis</h3>
-        <p>UV-C technology purifies your water and self-cleans every two hours. Double wall stainless keeps water cold for 24 hours — fill it anywhere on the road with no worries. Use code AMAZONLARQ15 for savings.</p>
+        <h3>Tips For Healthy Touring</h3>
+        <p>Nine science-backed habits to help you feel better on the road — from morning sunlight to protecting your hearing.</p>
         <div class="card-footer">
-          <span class="card-cta">View recommendation</span>
-          <span class="card-badge">Top Pick</span>
+          <span class="card-cta">Read the tips →</span>
         </div>
       </div>
     </a>
@@ -812,6 +816,22 @@
         <div class="card-footer">
           <span class="card-cta">Shop now</span>
           <span class="card-badge">New</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.amazon.com/dp/B0D8BPXVNB?ref=t_ac_view_request_product_image&campaignId=amzn1.campaign.2TDKSPPP8GMIE&linkCode=tr1&tag=roadieriches-20&linkId=amzn1.campaign.2TDKSPPP8GMIE_1774543254266" target="_blank" rel="noopener noreferrer" data-cat="health">
+      <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774473949/health-larq_udg9qp.avif" class="card-img-inner" alt="Larq Bottle PureVis" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;display:block;"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="card-icon-wrap">💧</div>
+          <span class="card-top-tag">Health &amp; Wellness</span>
+        </div>
+        <h3>Larq Bottle PureVis</h3>
+        <p>UV-C technology purifies your water and self-cleans every two hours. Double wall stainless keeps water cold for 24 hours — fill it anywhere on the road with no worries. Use code AMAZONLARQ15 for savings.</p>
+        <div class="card-footer">
+          <span class="card-cta">View recommendation</span>
+          <span class="card-badge">Top Pick</span>
         </div>
       </div>
     </a>
@@ -1674,8 +1694,7 @@
       </div>
       <div class="modal-item">
         <div class="modal-item-name"><a href="https://skittlelane.com" target="_blank" rel="noopener noreferrer">Skittle Lane</a></div>
-        <p>Multiple locations across the city.</p>
-        <p>A tucked-away gem in the CBD. Great espresso and a vibe that somehow makes you feel like a local immediately.</p>
+        <p>Multiple locations across the city. A tucked-away gem in the CBD. Great espresso and a vibe that somehow makes you feel like a local immediately.</p>
       </div>
       <div class="modal-item">
         <div class="modal-item-name"><a href="https://www.willandco.com.au" target="_blank" rel="noopener noreferrer">Will &amp; Co</a></div>
@@ -1955,6 +1974,79 @@
   <a href="#" onclick="openPrivacy();return false;" style="color:#888;text-decoration:underline;">Privacy Policy</a>
   &nbsp;·&nbsp;
   <a href="#" onclick="openTerms();return false;" style="color:#888;text-decoration:underline;">Terms of Use</a>
+</div>
+
+
+<!-- HEALTH TIPS MODAL -->
+<div id="modal-health" class="rr-modal" style="display:none;">
+  <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+  <div class="modal-hero">
+    <img src="https://res.cloudinary.com/djf2b8kqg/image/upload/v1774720912/IMG_1721_tewdq9.jpg" alt="Tips For Healthy Touring" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+    <div class="modal-hero-overlay">
+      <span class="modal-tag">Health &amp; Wellness</span>
+      <h2>Tips For Healthy Touring</h2>
+      <p>Small habits that compound. Science-backed ways to feel better on the road.</p>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="modal-grid">
+
+      <div class="modal-item">
+        <div class="modal-item-city">Movement</div>
+        <div class="modal-item-name">Walk After Meals</div>
+        <p>A 10-minute walk after eating blunts the blood sugar spike that follows a meal, particularly important on tour when food timing is irregular. Taking stairs over elevators adds low-intensity movement that accumulates meaningfully across a run of shows. Both habits require zero equipment and zero scheduling.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Nutrition</div>
+        <div class="modal-item-name">Skip After Show Food</div>
+        <p>Eating late at night, particularly the low quality food that appears after shows, disrupts sleep architecture and delays recovery. Your body prioritises digestion over restoration when you sleep on a full stomach. Even a light snack is significantly better than a full meal. When possible, eat before the show.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Movement</div>
+        <div class="modal-item-name">Flying Safer</div>
+        <p>Cabin pressure and prolonged sitting reduce circulation significantly. Compression socks counteract this by maintaining venous return in the lower legs. Standing and walking every 60-90 minutes reduces DVT risk measurably. Cabin humidity sits around 10-20%, well below what your body needs. Drink consistently throughout the flight, not just when you feel thirsty.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Circadian</div>
+        <div class="modal-item-name">Jet Lag Protocol</div>
+        <p>Light is the most powerful signal your circadian clock responds to. Getting bright light exposure in the morning of your new timezone and avoiding bright light in the evening accelerates adaptation faster than any supplement or medication. Even 20 minutes outside makes a measurable difference. Eating on the local meal schedule from day one also helps anchor your circadian clock faster. Resist the urge to eat at your home timezone hours.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Mental</div>
+        <div class="modal-item-name">Mindfulness</div>
+        <p>Five minutes of intentional stillness, whether a formal meditation or a gratitude list, is clinically shown to reduce cortisol, improve emotional regulation, and build resilience against the chronic low-grade stress of touring life. The format matters less than the consistency. Apps like <a href="https://dynamic.wakingup.com?share_id=39140B63" target="_blank" rel="noopener noreferrer">Waking Up</a> or <a href="https://www.headspace.com/referral/z6jb3?slug=755a0c" target="_blank" rel="noopener noreferrer">Headspace</a> lower the barrier to entry significantly.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Mental</div>
+        <div class="modal-item-name">Digital Boundaries</div>
+        <p>Constant connectivity is one of the defining stressors of modern touring. Designating phone-free windows, during meals, the hour before bed, or the first 30 minutes of your morning, measurably reduces baseline anxiety and improves presence both on and off the road. The notifications will wait.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Mental</div>
+        <div class="modal-item-name">Staying Connected</div>
+        <p>Maintaining relationships outside the tour bubble is one of the strongest predictors of long-term mental health on the road. The insularity of touring life is real. A deliberate weekly call with someone who knows you off the road provides perspective and grounding that the bubble can't. Don't let the time zone difference become an excuse.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Hearing</div>
+        <div class="modal-item-name">Protect Your Ears</div>
+        <p>Noise-induced hearing loss is the most common occupational injury in live music, and it's cumulative, irreversible, and entirely preventable. Even brief exposure at high SPL compounds over a career. Custom molded earplugs attenuate evenly across frequencies so you still hear clearly, just safely. If you haven't had a hearing test recently, get one. Your ears are your livelihood.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Circadian</div>
+        <div class="modal-item-name">Get Morning Sunlight</div>
+        <p>Natural light exposure within 30 minutes of waking triggers a cortisol pulse that sets your circadian clock for the day, improving alertness, mood, energy, and sleep quality that night. Even overcast daylight is orders of magnitude brighter than indoor lighting. Five to ten minutes outside is enough. It's one of the highest ROI habits on this entire list.</p>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <!-- PRIVACY POLICY MODAL -->
