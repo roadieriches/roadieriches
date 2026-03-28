@@ -1213,7 +1213,7 @@
       </div>
     </a>
 
-    <a class="card" href="https://pacelinefit.app.link/wPuYacPlpLb" target="_blank" rel="noopener noreferrer" data-cat="apps">
+    <a class="card" href="https://pacelinefit.app.link/wPuYacPlpLb" target="_blank" rel="noopener noreferrer" data-cat="apps" data-hidden="true">
       <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774471860/apps-paceline_f51owg.jpg" class="card-img-inner" alt="Paceline" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;"></div>
       <div class="card-body">
         <div class="card-top">
@@ -1318,7 +1318,11 @@
     btn.setAttribute('tabindex', '0');
     const f = btn.dataset.filter;
     cards.forEach(c => {
-      c.classList.toggle('hidden', f !== 'all' && c.dataset.cat !== f);
+      const isHidden = c.dataset.hidden === 'true';
+      c.classList.toggle('hidden',
+        (f === 'all' && isHidden) ||
+        (f !== 'all' && c.dataset.cat !== f)
+      );
     });
   }
 
