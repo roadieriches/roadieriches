@@ -748,23 +748,24 @@
 <div class="grid" id="card-grid">
 
     <!-- ROADIE OF THE MONTH -->
-    <a class="card rotm" href="https://www.instagram.com/roadieriches" target="_blank" rel="noopener noreferrer" data-cat="rotm">
-      <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774470983/rotm-6_hndvdi.jpg" class="card-img-inner" alt="Nominate Someone" style="width:100%;height:100%;object-fit:cover;object-position:center -40px;display:block;"></div>
+    <a class="card" data-cat="travel" onclick="openModal('hotel');return false;" href="#" aria-label="Hotel Hacks">
+      <div class="card-img">
+        <div class="card-img-inner">
+          <img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1775705610/hotel_o7ghd4.jpg" alt="Hotel Hacks" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;">
+        </div>
+      </div>
       <div class="card-body">
         <div class="card-top">
-          <div class="card-icon-wrap">🎸</div>
-          <span class="card-top-tag">Roadie Of The Month</span>
+          <div class="card-icon-wrap">🏨</div>
+          <span class="card-top-tag">Travel</span>
         </div>
-        <h3>Nominate Someone</h3>
-        <p>Know someone who deserves the spotlight? Every issue we feature one roadie making a difference on the road. DM us @roadieriches on Instagram.</p>
+        <h3>Hotel Hacks</h3>
+        <p>Nine ways to sleep better, travel smarter, and feel more like yourself on the road.</p>
         <div class="card-footer">
-          <span class="card-cta">Nominate via Instagram</span>
-          <span class="card-badge">Vol 6</span>
+          <span class="card-cta">Read the hacks</span>
         </div>
       </div>
     </a>
-
-    <!-- HEALTH TIPS -->
     <a class="card" data-cat="health" onclick="openModal('health');return false;" href="#" aria-label="Tips For Healthy Touring">
       <div class="card-img">
         <div class="card-img-inner">
@@ -783,9 +784,6 @@
         </div>
       </div>
     </a>
-
-
-    <!-- FINANCE -->
     <a class="card" href="https://www.wealthfront.com/c/affiliates/invited/AFFA-W0WH-TIB2-8B3X" target="_blank" rel="noopener noreferrer" data-cat="finance">
       <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774471427/finance-wealthfront_evcfrf.png" class="card-img-inner" alt="Wealthfront" style="width:100%;height:100%;object-fit:cover;object-position:center -15px;display:block;"></div>
       <div class="card-body">
@@ -798,6 +796,21 @@
         <div class="card-footer">
           <span class="card-cta">Get the bonus</span>
           <span class="card-badge">Top Pick</span>
+        </div>
+      </div>
+    </a>
+    <a class="card rotm" href="https://www.instagram.com/roadieriches" target="_blank" rel="noopener noreferrer" data-cat="rotm">
+      <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774470983/rotm-6_hndvdi.jpg" class="card-img-inner" alt="Nominate Someone" style="width:100%;height:100%;object-fit:cover;object-position:center -40px;display:block;"></div>
+      <div class="card-body">
+        <div class="card-top">
+          <div class="card-icon-wrap">🎸</div>
+          <span class="card-top-tag">Roadie Of The Month</span>
+        </div>
+        <h3>Nominate Someone</h3>
+        <p>Know someone who deserves the spotlight? Every issue we feature one roadie making a difference on the road. DM us @roadieriches on Instagram.</p>
+        <div class="card-footer">
+          <span class="card-cta">Nominate via Instagram</span>
+          <span class="card-badge">Vol 6</span>
         </div>
       </div>
     </a>
@@ -1137,7 +1150,7 @@
       </div>
     </a>
 
-    <a class="card" href="https://ibotta.onelink.me/iUfE/8cc13c64?friend_code=kpyehjp" target="_blank" rel="noopener noreferrer" data-cat="apps">
+    <a class="card" href="https://ibotta.onelink.me/iUfE/8cc13c64?friend_code=kpyehjp" data-hidden="true" target="_blank" rel="noopener noreferrer" data-cat="apps">
       <div class="card-img"><img src="https://res.cloudinary.com/djf2b8kqg/image/upload/w_600,q_80/v1774471858/apps-ibotta_ms7xyw.png" class="card-img-inner" alt="Ibotta" style="width:100%;height:100%;object-fit:cover;object-position:center -5px;display:block;"></div>
       <div class="card-body">
         <div class="card-top">
@@ -1985,6 +1998,79 @@
   <a href="#" onclick="openTerms();return false;" style="color:#888;text-decoration:underline;">Terms of Use</a>
 </div>
 
+
+
+<!-- HOTEL HACKS MODAL -->
+<div id="modal-hotel" class="rr-modal" style="display:none;">
+  <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+  <div class="modal-hero">
+    <img src="https://res.cloudinary.com/djf2b8kqg/image/upload/v1775705610/hotel_o7ghd4.jpg" alt="Hotel Hacks" style="width:100%;height:100%;object-fit:cover;object-position:center bottom;">
+    <div class="modal-hero-overlay">
+      <span class="modal-tag">Travel</span>
+      <h2>Hotel Hacks</h2>
+      <p>Sleep better. Travel smarter. Feel more like yourself on the road.</p>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="modal-grid">
+
+      <div class="modal-item">
+        <div class="modal-item-city">Sleep</div>
+        <div class="modal-item-name">Thermostat</div>
+        <p>Your body sleeps best in a cool environment, between 65-68°F. Turn it down the moment you check in and give it time to drop before you get into bed. One of the highest ROI sleep habits with zero effort.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Sleep</div>
+        <div class="modal-item-name">Electrical Tape</div>
+        <p>Smoke detector LEDs, alarm clocks, TV standby indicators — hotel rooms are full of small lights that disrupt melatonin production and fragment sleep. <a href="https://amzn.to/4tsMg1K" target="_blank" rel="noopener noreferrer">A small roll of black electrical tape</a> covers them all in under a minute. Pack it once, use it forever.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Sleep</div>
+        <div class="modal-item-name">Sleep Mask</div>
+        <p>Blackout curtains in hotels are never fully blackout. Light bleeds in from the sides, the hallway, the city outside. <a href="https://amzn.to/4t5Kfcc" target="_blank" rel="noopener noreferrer">A well-fitted sleep mask</a> eliminates the variable entirely. Non-negotiable for anyone after a late show night.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Sleep</div>
+        <div class="modal-item-name">Ear Plugs</div>
+        <p>Corridor noise, thin walls, street traffic, early housekeeping — hotels are loud. Foam ear plugs cost almost nothing and eliminate a significant portion of the noise that fragments sleep on the road. Keep a stash at all times.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Gear</div>
+        <div class="modal-item-name">Power Strip</div>
+        <p>Hotel rooms are designed for one or two guests with one device each. On tour you have a phone, laptop, watch, earbuds, and camera all needing charge simultaneously. <a href="https://amzn.to/4t1C3K8" target="_blank" rel="noopener noreferrer">A compact power strip</a> solves this permanently. Get one with USB-A and USB-C ports built in.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Gear</div>
+        <div class="modal-item-name">Dedicated Toiletry Kit</div>
+        <p>Keep a toiletry bag permanently packed and never unpacked at home. Everything you need, <a href="https://amzn.to/3QsFTgF" target="_blank" rel="noopener noreferrer">in travel sizes</a>, always ready to go. You save time packing and never forget anything. Set it up once and maintain it.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Laundry</div>
+        <div class="modal-item-name">Detergent Pods</div>
+        <p>A single pod in the sink with warm water and fifteen minutes handles a surprising amount of laundry. Socks, underwear, a base layer — hang dry overnight and ready by morning. Your own clothes, with <a href="https://amzn.to/4sGWjjj" target="_blank" rel="noopener noreferrer">detergent you like</a>, without hotel laundry prices.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Comfort</div>
+        <div class="modal-item-name">Bluetooth Speaker</div>
+        <p>A hotel room that sounds like yours is a hotel room that feels like yours. Music while you shower, wind-down audio before bed, something playing while you unpack. <a href="https://amzn.to/41nBDS0" target="_blank" rel="noopener noreferrer">A compact waterproof speaker</a> is one of the simplest quality of life upgrades for life on the road.</p>
+      </div>
+
+      <div class="modal-item">
+        <div class="modal-item-city">Coffee</div>
+        <div class="modal-item-name">Aeropress</div>
+        <p>Hotel in-room coffee is universally bad. <a href="https://amzn.to/3O7vlTG" target="_blank" rel="noopener noreferrer">An Aeropress</a> is compact and produces genuinely good coffee in under three minutes. Bring your own coffee from home or source local beans on a day off. Worth it every single morning.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- HEALTH TIPS MODAL -->
 <div id="modal-health" class="rr-modal" style="display:none;">
