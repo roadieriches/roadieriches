@@ -326,7 +326,7 @@
 
   /* CTA STRIP */
   .cta-wrap {
-    padding: 0 2.5rem 0.5rem;
+    padding: 0 2.5rem 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -415,13 +415,13 @@
 
   /* SOCIAL */
   .social-wrap {
-    padding: 0.15rem 2.5rem 1.5rem;
+    padding: 0 2.5rem 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: flex-end;
+    gap: 1.25rem;
     flex-wrap: wrap;
   }
 
@@ -646,8 +646,6 @@
     .filters { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.5rem; }
     .filter-btn { flex-shrink: 0; }
     .cta-strip { flex-direction: column; }
-    .cta-strip > div { width: 100%; max-width: 100%; flex-shrink: 1; }
-    .beehiiv-embed { width: 100% !important; min-width: 0 !important; height: 120px !important; }
     .cta-input { width: 100%; }
     .social-wrap { justify-content: center; }
   }
@@ -1270,25 +1268,6 @@
 </div>
 
 
-<!-- CTA -->
-<div class="cta-wrap">
-  <div class="cta-strip" id="subscribe">
-    <div style="flex:1;min-width:0;">
-      <h2>Get the newsletter.</h2>
-      <p>Quarterly picks for the touring music industry — straight to your inbox.</p>
-    </div>
-    <div style="width:100%;max-width:420px;">
-      <iframe src="https://subscribe-forms.beehiiv.com/488a3fae-9fd1-4917-b267-1a0d3d11112b"
-        class="beehiiv-embed"
-        data-test-id="beehiiv-embed"
-        frameborder="0"
-        scrolling="no"
-        style="width:100%;min-width:280px;height:120px;min-height:120px;margin-top:6px;background-color:transparent;box-shadow:none;display:block;overflow:visible;">
-      </iframe>
-    </div>
-  </div>
-</div>
-
 <!-- SOCIAL LINKS -->
 <div class="social-wrap">
   <p class="social-label">Follow along</p>
@@ -1322,6 +1301,27 @@
 
   </div>
 </div>
+
+<!-- CTA -->
+<div class="cta-wrap">
+  <div class="cta-strip" id="subscribe">
+    <div style="flex:1;min-width:200px;">
+      <h2>Get the newsletter.</h2>
+      <p>Quarterly picks for the touring music industry — straight to your inbox.</p>
+    </div>
+    <div style="flex-shrink:0;">
+      <iframe src="https://subscribe-forms.beehiiv.com/488a3fae-9fd1-4917-b267-1a0d3d11112b"
+        class="beehiiv-embed"
+        data-test-id="beehiiv-embed"
+        frameborder="0"
+        scrolling="no"
+        style="width:420px;height:90px;margin-top:6px;background-color:transparent;box-shadow:none;max-width:100%;display:block;">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+</main>
 
 <script>
   const btns = document.querySelectorAll('.filter-btn');
