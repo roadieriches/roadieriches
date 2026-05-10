@@ -51,15 +51,20 @@
 
   /* NAV */
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.85rem 2.5rem;
     border-bottom: 1px solid var(--border);
     background: var(--white);
     position: sticky;
     top: 0;
     z-index: 100;
+  }
+
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .nav-logo {
@@ -722,8 +727,10 @@
 
 <a href="#card-grid" class="skip-link">Skip to main content</a>
 <nav>
+  <div class="nav-inner">
   <img class="nav-logo" alt="Roadie Riches" src="https://res.cloudinary.com/djf2b8kqg/image/upload/v1774525646/logo_gebhjx.png" alt="Roadie Riches">
   <a href="#subscribe" class="nav-subscribe">Subscribe</a>
+  </div>
 </nav>
 
 <!-- HERO -->
