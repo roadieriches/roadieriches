@@ -646,6 +646,7 @@
     .filters { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.5rem; }
     .filter-btn { flex-shrink: 0; }
     .cta-strip { flex-direction: column; }
+    .cta-strip > div { width: 100%; max-width: 100%; flex-shrink: 1; }
     .cta-input { width: 100%; }
     .social-wrap { justify-content: center; }
   }
@@ -655,11 +656,6 @@
   }
 
 
-  .beehiiv-embed {
-    display: block;
-    border: none;
-    overflow: hidden;
-  }
 
 
   .skip-link {
@@ -1268,26 +1264,20 @@
 </div>
 
 
-<!--<!-- CTA -->
+<!-- CTA -->
 <div class="cta-wrap">
   <div class="cta-strip" id="subscribe">
     <div style="flex:1;min-width:200px;">
       <h2>Get the newsletter.</h2>
       <p>Quarterly picks for the touring music industry — straight to your inbox.</p>
     </div>
-    <div style="flex-shrink:0;">
-      <iframe src="https://subscribe-forms.beehiiv.com/488a3fae-9fd1-4917-b267-1a0d3d11112b"
-        class="beehiiv-embed"
-        data-test-id="beehiiv-embed"
-        frameborder="0"
-        scrolling="no"
-        style="width:420px;height:90px;margin-top:6px;background-color:transparent;box-shadow:none;max-width:100%;display:block;">
-      </iframe>
+    <div style="flex-shrink:0;max-width:420px;width:100%;">
+      <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="488a3fae-9fd1-4917-b267-1a0d3d11112b"></script>
     </div>
   </div>
 </div>
 
-<<!-- SOCIAL LINKS -->
+<!-- SOCIAL LINKS -->
 <div class="social-wrap">
   <p class="social-label">Follow along</p>
   <div class="social-icons">
@@ -1957,6 +1947,38 @@
   }
 
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closePrivacy(); closeTerms(); } });
+
+  async function rrSubscribe(e) {
+    e.preventDefault();
+    const email = document.getElementById('rr-email').value;
+    const msg = document.getElementById('rr-subscribe-msg');
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://api.beehiiv.com/v2/publications/pub_488a3fae-9fd1-4917-b267-1a0d3d11112b/subscriptions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, reactivate_existing: true, send_welcome_email: true })
+      });
+      if (res.ok) {
+        msg.textContent = "You're in! Check your inbox.";
+        msg.style.display = 'block';
+        document.getElementById('rr-subscribe-form').style.display = 'none';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      msg.textContent = "Something went wrong. Try again.";
+      msg.style.color = '#e05';
+      msg.style.display = 'block';
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    }
+  }
+  document.addEventListener('keydown', function(e) {
+  });
+
   // Cookie consent
   function acceptCookies() {
     try { localStorage.setItem('rr_cookie_consent', '1'); } catch(e) {}
